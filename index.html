@@ -2,45 +2,22 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox.min.css">
-    <script src="/assets/js/jquery-3.6.0.min.js"></script>
-    <title>Sample Site</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+  <title>Sample Site</title>
 </head>
 
- <body>
+<body>
+  <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/watch?v=0o9obLrOrGM" href="javascript:;">
+  YouTube動画
+</a>
 
-  <div id="container">
 
-    <h1>iframe sample</h1>
 
-    <nav>
-      <ul>
-        <li><a href="info01.html" target="infoWindow">春</a></li>
-        <li><a href="info02.html" target="infoWindow">夏</a></li>
-        <li><a href="info03.html" target="infoWindow">秋</a></li>
-        <li><a href="info04.html" target="infoWindow">冬</a></li>
-      </ul>
-    </nav>
 
-    <iframe src="default.html" name="infoWindow"></iframe>
-
-    <a data-fancybox data-type="pdf" href="YOUR_PDF_FILE.pdf">Click me</a>
-
-    <a
-  data-fancybox
-  data-type="pdf"
-  href="/pdfjs/web/viewer.html?file=YOUR_PDF_FILE.pdf"
-  >Click me</a
->
-
-  </div>
-
-  <script src="/fancybox/jquery.fancybox.min.js"></script>
-  <script>
-    $('[data-fancybox]').fancybox();
-  </script>
 </body>
 
 </html>
