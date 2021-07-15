@@ -2,26 +2,55 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex">
+
+  <title>fancyBox3-demo03</title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="js//fancybox/jquery.fancybox-1.3.4.css" />
-<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
 </head>
-  <title>Sample Site</title>
-</head>
+<script>
+  $(document).ready(function() {
+    $('[data-fancybox]').fancybox({
+      // オプションを下記に記載していきます
+      loop: true, // 複数画像表示時に最初と最後をループさせる
+      toolbar: false, // ツールバーの非表示
+      smallBtn: true, // 小さいCloseボタン利用する
+      iframe: { // iframe 関連の処理
+        preload: false //iframeのプリロードをしない
+      }
+    });
+  });
+</script>
 
 <body>
-  <div id="list_img">
-      <ul class="clearfix">
-          <li><a class="group" rel="group1" href="img/img_1.jpg"><img src="img/img_1.jpg" alt="" width="250"></a></li>
-          <li><a class="group" rel="group1" href="img/img_2.jpg"><img src="img/img_2.jpg" alt="" width="250"></a></li>
-          <li><a class="group" rel="group1" href="img/img_3.jpg"><img src="img/img_3.jpg" alt="" width="250"></a></li>
-      </ul>
+
+  <p style="text-align:center;">画像以外のコンテンツのオーバーレイ表示 ＆グループ化</p>
+
+  <ul>
+
+    <li><a href="img/image01.jpg" data-fancybox="etc" data-type="image" data-caption="キャプション 犬">image</a></li>
+    <li><a data-fancybox="etc" data-caption="キャプション Youtube" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">YouTube</a></li>
+    <li><a data-fancybox="etc" data-caption="キャプション Vimeo" href="https://vimeo.com/191947042">Vimeo video</a></li>
+    <li><a data-fancybox="etc" data-caption="キャプション Googleマップ"
+        href="https://www.google.co.jp/maps/place/%E6%9D%B1%E4%BA%AC%E9%A7%85/@35.7012582,138.8731165,8.29z/data=!4m12!1m6!3m5!1s0x60188bfbd89f700b:0x277c49ba34ed38!2z5p2x5Lqs6aeF!8m2!3d35.6811673!4d139.7670516!3m4!1s0x60188bfbd89f700b:0x277c49ba34ed38!8m2!3d35.6811673!4d139.7670516">Google
+        Map</a></li>
+    <li><a data-fancybox="etc" href="https://www.instagram.com/p/BNXYW8-goPI/?taken-by=jamesrelfdyer" data-caption="キャプション Instagram">Instagram photo ※Instagramの仕様変更により読込不可に</a></li>
+
+    <li><a data-fancybox="etc" data-caption="キャプション inline" data-type="inline" href="#hidden-content">inline</a></li>
+    <li><a data-fancybox="etc" data-caption="キャプション iframe" data-type="iframe" href="samplepage.html">iframe</a></li>
+    <!-- ajax読み込みの場合は、hrefでは無くdata-src で読み込みます-->
+    <li><a href="#" data-fancybox="etc" data-caption="キャプション ajax" data-type="ajax" data-src="samplepage.html">ajax</a></li>
+  </ul>
+
+
+  <div style="display: none;" id="hidden-content">
+    <h2>インライン要素</h2>
+    <p>スタイルで display: none; とし隠しています。</p>
   </div>
-
-
-
 
 </body>
 
